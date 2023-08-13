@@ -15,30 +15,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Movie.init({
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: 'Title cannot empty'
-        },
-        notEmpty: {
-          msg: 'Title cannot empty'
-        }
-      }
-    },
-    releaseYear: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: 'Release Year cannot empty'
-        },
-        notEmpty: {
-          msg: 'Release Year cannot empty'
-        }
-      }
-    },
+    title: DataTypes.STRING,
+    releaseYear: DataTypes.INTEGER,
     imageUrl: DataTypes.STRING,
     genreId: DataTypes.INTEGER
   }, {
